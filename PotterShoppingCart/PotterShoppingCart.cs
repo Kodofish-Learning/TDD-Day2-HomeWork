@@ -19,8 +19,10 @@ namespace PotterShoppingCart
         {
             if (_ShoppingItems.Count == 1)
                 return 100;
-            else
+            else if (_ShoppingItems.Count == 2)
                 return 190;
+            else
+                return 270;
         }
     }
 }
