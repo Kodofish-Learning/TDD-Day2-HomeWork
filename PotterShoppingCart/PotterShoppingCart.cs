@@ -17,12 +17,11 @@ namespace PotterShoppingCart
 
         public decimal getTotalPrice()
         {
-            if (_ShoppingItems.Count == 1)
-                return 100;
-            else if (_ShoppingItems.Count == 2)
-                return 190;
-            else
-                return 270;
+            decimal rate = 1;
+
+            decimal totalPrice = (rate - (decimal)((_ShoppingItems.Count - 1) * 0.05)) * _ShoppingItems.Sum(x => x.Price);
+
+            return totalPrice;
         }
     }
 }
