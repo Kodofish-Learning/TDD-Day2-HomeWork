@@ -145,5 +145,29 @@ namespace PotterShoppingCart.Test
             var expected = 320;
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Scenario_一次買了整套_一二三四五集各買了一本_價格應為100X5X0_75_合計375元()
+        {
+            //arrange
+            List<Book> books = new List<Book> {
+                new Book { Name="哈利波特1", Price=100 },
+                new Book { Name="哈利波特2", Price=100 },
+                new Book { Name="哈利波特3", Price=100 },
+                new Book { Name="哈利波特4", Price=100 },
+                new Book { Name="哈利波特5", Price=100 },
+            };
+
+            PotterShoppingCart target = new PotterShoppingCart();
+
+            target.AddShoppingItem(books);
+
+            //act
+            var actual = target.getTotalPrice();
+
+            //assert
+            var expected = 375;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
