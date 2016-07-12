@@ -65,7 +65,7 @@ namespace PotterShoppingCart.Test
         {
             //arrange
             List<Book> books = new List<Book> {
-                new Book { Name="哈利波特1", Price=100 }
+                new Book { Name="哈利波特1", Price=100, Amount= 1 }
             };
 
             PotterShoppingCart target = new PotterShoppingCart();
@@ -85,8 +85,8 @@ namespace PotterShoppingCart.Test
         {
             //arrange
             List<Book> books = new List<Book> {
-                new Book { Name="哈利波特1", Price=100 },
-                new Book { Name="哈利波特2", Price=100 },
+                new Book { Name="哈利波特1", Price=100, Amount= 1 },
+                new Book { Name="哈利波特2", Price=100, Amount= 1 },
             };
 
             PotterShoppingCart target = new PotterShoppingCart();
@@ -106,9 +106,9 @@ namespace PotterShoppingCart.Test
         {
             //arrange
             List<Book> books = new List<Book> {
-                new Book { Name="哈利波特1", Price=100 },
-                new Book { Name="哈利波特2", Price=100 },
-                new Book { Name="哈利波特3", Price=100 },
+                new Book { Name="哈利波特1", Price=100, Amount= 1 },
+                new Book { Name="哈利波特2", Price=100, Amount= 1 },
+                new Book { Name="哈利波特3", Price=100, Amount= 1 },
             };
 
             PotterShoppingCart target = new PotterShoppingCart();
@@ -128,10 +128,10 @@ namespace PotterShoppingCart.Test
         {
             //arrange
             List<Book> books = new List<Book> {
-                new Book { Name="哈利波特1", Price=100 },
-                new Book { Name="哈利波特2", Price=100 },
-                new Book { Name="哈利波特3", Price=100 },
-                new Book { Name="哈利波特4", Price=100 },
+                new Book { Name="哈利波特1", Price=100, Amount= 1 },
+                new Book { Name="哈利波特2", Price=100, Amount= 1 },
+                new Book { Name="哈利波特3", Price=100, Amount= 1 },
+                new Book { Name="哈利波特4", Price=100, Amount= 1 },
             };
 
             PotterShoppingCart target = new PotterShoppingCart();
@@ -151,11 +151,11 @@ namespace PotterShoppingCart.Test
         {
             //arrange
             List<Book> books = new List<Book> {
-                new Book { Name="哈利波特1", Price=100 },
-                new Book { Name="哈利波特2", Price=100 },
-                new Book { Name="哈利波特3", Price=100 },
-                new Book { Name="哈利波特4", Price=100 },
-                new Book { Name="哈利波特5", Price=100 },
+                new Book { Name="哈利波特1", Price=100, Amount= 1 },
+                new Book { Name="哈利波特2", Price=100, Amount= 1 },
+                new Book { Name="哈利波特3", Price=100, Amount= 1 },
+                new Book { Name="哈利波特4", Price=100, Amount= 1 },
+                new Book { Name="哈利波特5", Price=100, Amount= 1 },
             };
 
             PotterShoppingCart target = new PotterShoppingCart();
@@ -188,7 +188,7 @@ namespace PotterShoppingCart.Test
             var actual = target.getTotalPrice();
 
             //assert
-            var expected = 375;
+            var expected = 370;
             Assert.AreEqual(expected, actual);
         }
     }
