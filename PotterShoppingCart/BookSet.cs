@@ -4,7 +4,7 @@ namespace PotterShoppingCart
 {
     public class BookSet
     {
-        public List<Book> SetItem { get; set; }
-        public decimal SetPrice { get; set; }
+        public List<Book> SetItems { get; set; }
+        public decimal Price { get; set; }
     }
 }
